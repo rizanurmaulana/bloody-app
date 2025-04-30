@@ -6,12 +6,15 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_apk"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon_apk"
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodyApp"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.authentication.AuthActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.splashscreen.SplashScreen"
             android:exported="true">
