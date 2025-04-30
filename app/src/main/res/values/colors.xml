@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Branding -->
+    <color name="color_primary">#E53935</color>
+
+    <!-- Secondary / Background Elements -->
+    <color name="color_secondary">#F2F2F2</color>
+    <color name="color_background">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="color_text_primary">#212121</color>
+    <color name="color_text_secondary">#757575</color>
+    <color name="color_text_hint">#979595</color>
 </resources>
