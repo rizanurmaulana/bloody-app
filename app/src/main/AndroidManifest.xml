@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BloodyApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.authentication.AuthActivity"
             android:exported="false" />
         <activity
@@ -26,8 +29,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
