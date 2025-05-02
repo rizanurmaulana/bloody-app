@@ -20,4 +20,13 @@
     <string name="full_name">Nama Lengkap</string>
     <string name="placeholder_full_name">nama lengkap</string>
     <string name="have_account">Sudah punya akun?</string>
+    <string name="skip">Skip</string>
+    <string name="selanjutnya">Selanjutnya</string>
+    <string name="title_onboarding_1">Donor Darah</string>
+    <string name="desc_onboarding_1">Bantu sesama dengan mendonorkan darah untuk kehidupan yang lebih baik.</string>
+    <string name="title_onboarding_2">Selamatkan Hidup</string>
+    <string name="desc_onboarding_2">Setetes darah Anda sangat berarti untuk menyelamatkan banyak jiwa.</string>
+    <string name="image_onboarding">Image Onboarding</string>
+    <string name="title_onboarding_3">Komunitas Donor</string>
+    <string name="desc_onboarding_3">Bergabunglah dengan komunitas peduli dan berbagi kebaikan melalui donor darah.</string>
 </resources>
