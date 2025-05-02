@@ -16,4 +16,8 @@
     <string name="dont_have_account">Belum punya akun?</string>
     <string name="signup">Signup</string>
     <string name="or">OR</string>
+    <string name="signup_description">Buat akun dan isi formulir dibawah.</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="placeholder_full_name">nama lengkap</string>
+    <string name="have_account">Sudah punya akun?</string>
 </resources>
