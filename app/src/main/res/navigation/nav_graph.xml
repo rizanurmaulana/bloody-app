@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bloody_app.ui.home.HomeFragment"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.bloody_app.ui.schedule.ScheduleFragment"
+        android:label="Schedule" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.bloody_app.ui.history.HistoryFragment"
+        android:label="History" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.bloody_app.ui.profile.ProfileFragment"
+        android:label="Profile" />
+
+</navigation>
