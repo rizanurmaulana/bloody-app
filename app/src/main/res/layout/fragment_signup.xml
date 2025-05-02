@@ -231,16 +231,17 @@
             android:text="@string/have_account"
             android:fontFamily="@font/poppins"
             android:textColor="@color/color_text_primary"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:layout_marginEnd="4dp"/>
 
         <TextView
+            android:id="@+id/textLoginLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login"
             android:fontFamily="@font/poppins"
             android:textColor="@color/color_primary"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
