@@ -29,4 +29,11 @@
     <string name="image_onboarding">Image Onboarding</string>
     <string name="title_onboarding_3">Komunitas Donor</string>
     <string name="desc_onboarding_3">Bergabunglah dengan komunitas peduli dan berbagi kebaikan melalui donor darah.</string>
+    <string name="image_banner">Image Banner</string>
+    <string name="image_article">Image Article</string>
+    <string name="event_location">Nama Lokasi</string>
+    <string name="icon_calendar">Icon Calendar</string>
+    <string name="event_date">7 Mei 2025</string>
+    <string name="event_time">08.00 - 13.00</string>
+    <string name="icon_time">Icon Time</string>
 </resources>
