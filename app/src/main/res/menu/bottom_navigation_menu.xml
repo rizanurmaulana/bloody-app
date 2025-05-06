@@ -8,19 +8,19 @@
         android:icon="@drawable/baseline_home_24" />
 
     <item
-        android:id="@+id/scheduleFragment"
+        android:id="@+id/jadwalFragment"
         android:enabled="true"
         android:title="Jadwal"
         android:icon="@drawable/baseline_view_list_24" />
 
     <item
-        android:id="@+id/historyFragment"
+        android:id="@+id/riwayatFragment"
         android:enabled="true"
         android:title="Riwayat"
         android:icon="@drawable/baseline_bloodtype_24" />
 
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/profilFragment"
         android:enabled="true"
         android:title="Akun"
         android:icon="@drawable/baseline_person_24" />

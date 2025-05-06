@@ -7,17 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bloody_app.R
+import com.example.bloody_app.model.JadwalDonor
 
-data class JadwalDonor(
-    val lokasi: String,
-    val tanggal: String,
-    val waktu: String,
-    val image: Int
-)
-
-
-class JadwalAdapter(private val list: List<JadwalDonor>) :
-    RecyclerView.Adapter<JadwalAdapter.JadwalViewHolder>() {
+class JadwalCardAdapter(private val list: List<JadwalDonor>) :
+    RecyclerView.Adapter<JadwalCardAdapter.JadwalViewHolder>() {
 
     inner class JadwalViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val eventImage: ImageView = view.findViewById(R.id.eventImage)

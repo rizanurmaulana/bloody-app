@@ -97,7 +97,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewJadwal"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:overScrollMode="never"
                 android:paddingStart="4dp"
@@ -135,7 +135,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/card_border"
+                    android:background="@drawable/background_rounded"
                     android:orientation="vertical">
 
                     <ImageView
@@ -181,7 +181,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/card_border"
+                    android:background="@drawable/background_rounded"
                     android:orientation="vertical">
 
                     <ImageView

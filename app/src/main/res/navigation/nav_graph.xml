@@ -9,16 +9,16 @@
         android:name="com.example.bloody_app.ui.home.HomeFragment"
         android:label="Home" />
     <fragment
-        android:id="@+id/scheduleFragment"
-        android:name="com.example.bloody_app.ui.schedule.ScheduleFragment"
-        android:label="Schedule" />
+        android:id="@+id/jadwalFragment"
+        android:name="com.example.bloody_app.ui.jadwal.JadwalFragment"
+        android:label="Jadwal" />
     <fragment
-        android:id="@+id/historyFragment"
+        android:id="@+id/riwayatFragment"
         android:name="com.example.bloody_app.ui.history.HistoryFragment"
-        android:label="History" />
+        android:label="Riwayat" />
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/profilFragment"
         android:name="com.example.bloody_app.ui.profile.ProfileFragment"
-        android:label="Profile" />
+        android:label="Profil" />
 
 </navigation>
