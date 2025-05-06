@@ -11,13 +11,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.bloody_app.R
+import com.example.bloody_app.model.JadwalDonor
+import com.example.bloody_app.model.listJadwal
 
 class HomeFragment : Fragment() {
 
     private lateinit var bannerViewPager: ViewPager2
     private lateinit var bannerAdapter: BannerAdapter
     private lateinit var recyclerViewJadwal: RecyclerView
-    private lateinit var jadwalAdapter: JadwalAdapter
+    private lateinit var jadwalCardAdapter: JadwalCardAdapter
     private val handler = Handler(Looper.getMainLooper())
 
     override fun onCreateView(
@@ -46,17 +48,12 @@ class HomeFragment : Fragment() {
 
         recyclerViewJadwal = view.findViewById(R.id.recyclerViewJadwal)
 
-        val listJadwal = listOf(
-            JadwalDonor("PMI Cirebon", "7 Mei 2025", "08.00 - 13.00", R.drawable.article1),
-            JadwalDonor("Alun-Alun Majalengka", "10 Mei 2025", "09.00 - 12.00", R.drawable.article2),
-            JadwalDonor("RS Indramayu", "12 Mei 2025", "08.30 - 11.00", R.drawable.article1)
-        )
-
-        jadwalAdapter = JadwalAdapter(listJadwal)
+        jadwalCardAdapter = JadwalCardAdapter(listJadwal)
 
         recyclerViewJadwal.apply {
-            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            adapter = jadwalAdapter
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            adapter = jadwalCardAdapter
         }
     }
 
