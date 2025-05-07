@@ -16,7 +16,8 @@
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:layout_width="19dp"
@@ -40,7 +41,7 @@
         android:id="@+id/scrollContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/bg_top_rounded"
+        android:background="@color/white"
         android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@id/headerLayout"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,17 +51,46 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
             android:paddingBottom="20dp"
             android:orientation="vertical">
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/bannerViewPager"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="123dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:background="@color/color_primary">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/tv_greeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/hai_user"
+                        android:textSize="24sp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_next_donation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/next_donation"
+                        android:textSize="14sp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -75,18 +105,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Jadwal Donor Terdekat"
+                    android:text="@string/nearest_schedule"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:id="@+id/textLihatSemua"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
-                    android:text="Lihat Semua"
+                    android:text="@string/see_all"
                     android:textColor="@color/color_text_secondary"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -105,10 +136,18 @@
                 android:clipToPadding="false"
                 android:scrollbars="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_jadwal_card"
+                tools:listitem="@layout/item_schedule_card"
                 android:orientation="horizontal"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/bannerViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -117,103 +156,21 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Artikel Terbaru"
+                android:text="@string/latest_article"
                 android:textSize="16sp"
-                android:textStyle="bold"
                 android:layout_marginBottom="12dp"/>
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
+                android:id="@+id/article_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
-                app:cardUseCompatPadding="false"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_rounded"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/image_article"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/article1" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:text="3 manfaat Donor Darah Bagi Kesehatan Tubuh"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:paddingBottom="8dp"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
-                        android:textColor="@color/color_text_secondary"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_rounded"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/image_article"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/article2" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:text="Kenali Donor Darah dan Beragam Manfaatnya"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:paddingBottom="8dp"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
-                        android:textColor="@color/color_text_secondary"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:overScrollMode="never" />
         </LinearLayout>
     </ScrollView>
 

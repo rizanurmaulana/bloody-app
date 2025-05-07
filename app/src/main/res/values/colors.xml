@@ -7,6 +7,7 @@
     <color name="color_primary">#E53935</color>
 
     <!-- Secondary / Background Elements -->
+    <color name="transparent">#00000000</color>
     <color name="color_secondary">#F2F2F2</color>
     <color name="color_background">#FFFFFF</color>
 
