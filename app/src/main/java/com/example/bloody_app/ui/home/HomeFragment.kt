@@ -13,7 +13,7 @@ import com.example.bloody_app.R
 import com.example.bloody_app.databinding.FragmentHomeBinding
 import com.example.bloody_app.databinding.ItemArticleBinding
 import com.example.bloody_app.model.listArticles
-import com.example.bloody_app.model.listJadwal
+import com.example.bloody_app.model.listScheduleLimit
 
 class HomeFragment : Fragment() {
 
@@ -61,10 +61,10 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupSchedule() {
-        val jadwalAdapter = ScheduleCardAdapter(listJadwal)
-        binding.recyclerViewJadwal.apply {
+        val scheduleCardAdapter = ScheduleCardAdapter(listScheduleLimit)
+        binding.rvScheduleCard.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            adapter = jadwalAdapter
+            adapter = scheduleCardAdapter
         }
     }
 

@@ -58,4 +58,5 @@
     <string name="nearest_schedule">Jadwal Donor Terdekat</string>
     <string name="see_all">Lihat Semua</string>
     <string name="latest_article">Artikel Terbaru</string>
+    <string name="search">Cari</string>
 </resources>
