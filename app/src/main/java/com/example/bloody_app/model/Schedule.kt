@@ -35,12 +35,12 @@ val listSchedule = listOf(
 
 
 val listHistory = listOf(
-    Schedule("PMI Cirebon", "7 Mei 2025", "08.00 - 13.00", R.drawable.image_43),
+    Schedule("PMI Cirebon", "7 Mei 2025", "11.35", R.drawable.image_43),
     Schedule(
         "Alun-Alun Majalengka",
         "10 Mei 2025",
-        "09.00 - 12.00",
+        "09.45",
         R.drawable.image_43
     ),
-    Schedule("RS Indramayu", "12 Mei 2025", "08.30 - 11.00", R.drawable.image_43)
+    Schedule("RS Indramayu", "12 Mei 2025", "10.30", R.drawable.image_43)
 )
