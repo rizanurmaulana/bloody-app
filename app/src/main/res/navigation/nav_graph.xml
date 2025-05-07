@@ -9,8 +9,8 @@
         android:name="com.example.bloody_app.ui.home.HomeFragment"
         android:label="Home" />
     <fragment
-        android:id="@+id/jadwalFragment"
-        android:name="com.example.bloody_app.ui.jadwal.JadwalFragment"
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.bloody_app.ui.schedule.ScheduleFragment"
         android:label="Jadwal" />
     <fragment
         android:id="@+id/riwayatFragment"

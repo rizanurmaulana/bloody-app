@@ -1,4 +1,4 @@
-package com.example.bloody_app.ui.jadwal
+package com.example.bloody_app.ui.schedule
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,25 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bloody_app.R
-import com.example.bloody_app.databinding.FragmentJadwalBinding
-import com.example.bloody_app.model.JadwalDonor
-import com.example.bloody_app.model.listJadwal
+import com.example.bloody_app.databinding.FragmentScheduleBinding
+import com.example.bloody_app.model.listSchedule
 
-class JadwalFragment : Fragment() {
+class ScheduleFragment : Fragment() {
 
-    private var _binding: FragmentJadwalBinding? = null
+    private var _binding: FragmentScheduleBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var recyclerJadwal: RecyclerView
-    private lateinit var jadwalAdapter: JadwalAdapter
+    private lateinit var recyclerSchedule: RecyclerView
+    private lateinit var scheduleAdapter: ScheduleAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentJadwalBinding.inflate(inflater, container, false)
+        _binding = FragmentScheduleBinding.inflate(inflater, container, false)
 
         binding.topAppBar.title = "Event Donor Darah"
         binding.topAppBar.setNavigationOnClickListener {
@@ -36,14 +34,14 @@ class JadwalFragment : Fragment() {
             // Tambahkan logika pencarian di sini
         }
 
-        recyclerJadwal = binding.recyclerJadwal
+        recyclerSchedule = binding.rvScheduleList
 
-        jadwalAdapter = JadwalAdapter(listJadwal)
+        scheduleAdapter = ScheduleAdapter(listSchedule)
 
-        recyclerJadwal.apply {
+        recyclerSchedule.apply {
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-            adapter = jadwalAdapter
+            adapter = scheduleAdapter
         }
 
         return binding.root
