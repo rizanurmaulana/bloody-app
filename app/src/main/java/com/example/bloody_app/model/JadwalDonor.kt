@@ -18,3 +18,14 @@ val listJadwal = listOf(
     ),
     JadwalDonor("RS Indramayu", "12 Mei 2025", "08.30 - 11.00", R.drawable.image_43)
 )
+
+val listHistory = listOf(
+    JadwalDonor("PMI Cirebon", "7 Mei 2025", "08.00 - 13.00", R.drawable.image_43),
+    JadwalDonor(
+        "Alun-Alun Majalengka",
+        "10 Mei 2025",
+        "09.00 - 12.00",
+        R.drawable.image_43
+    ),
+    JadwalDonor("RS Indramayu", "12 Mei 2025", "08.30 - 11.00", R.drawable.image_43)
+)
