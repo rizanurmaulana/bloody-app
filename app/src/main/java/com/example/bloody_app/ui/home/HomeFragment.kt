@@ -8,12 +8,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bloody_app.R
 import com.example.bloody_app.databinding.FragmentHomeBinding
 import com.example.bloody_app.databinding.ItemArticleBinding
 import com.example.bloody_app.model.listArticles
 import com.example.bloody_app.model.listScheduleLimit
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeFragment : Fragment() {
 
@@ -34,6 +36,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.tvSeeAllSchedule.setOnClickListener {
+            val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigation)
+            bottomNav.selectedItemId = R.id.scheduleFragment
+        }
+
         setupUser()
         setupBanner()
         setupSchedule()
@@ -51,9 +58,9 @@ class HomeFragment : Fragment() {
 
     private fun setupBanner() {
         val bannerList = listOf(
-            R.drawable.banner1,
-            R.drawable.banner2,
-            R.drawable.banner3
+            R.drawable.image_banner1,
+            R.drawable.image_banner2,
+            R.drawable.image_banner3
         )
         bannerAdapter = BannerAdapter(bannerList)
         binding.bannerViewPager.adapter = bannerAdapter
@@ -84,7 +91,7 @@ class HomeFragment : Fragment() {
                 val currentItem = binding.bannerViewPager.currentItem
                 val nextItem = if (currentItem < bannerAdapter.itemCount - 1) currentItem + 1 else 0
                 binding.bannerViewPager.setCurrentItem(nextItem, true)
-                handler.postDelayed(this, 3000)
+                handler.postDelayed(this, 5000)
             }
         }
         handler.post(runnable)
