@@ -113,7 +113,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
-                    android:id="@+id/textLihatSemua"
+                    android:id="@+id/tv_see_all_schedule"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
@@ -131,23 +131,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:overScrollMode="never"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp"
                 android:clipToPadding="false"
                 android:scrollbars="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_schedule_card"
                 android:orientation="horizontal"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"/>
+                tools:layout_height="150dp"/>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/bannerViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="123dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
+                android:layout_marginTop="16dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -170,7 +166,8 @@
                 android:clipToPadding="false"
                 android:nestedScrollingEnabled="false"
                 android:orientation="vertical"
-                android:overScrollMode="never" />
+                android:overScrollMode="never"
+                tools:layout_height="500dp"/>
         </LinearLayout>
     </ScrollView>
 
