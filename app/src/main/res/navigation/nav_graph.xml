@@ -15,7 +15,12 @@
     <fragment
         android:id="@+id/scheduleFragment"
         android:name="com.example.bloody_app.ui.schedule.ScheduleFragment"
-        android:label="Jadwal" />
+        android:label="Jadwal">
+        <action
+            android:id="@+id/action_scheduleFragment_to_scheduleDetailFragment"
+            app:destination="@id/scheduleDetailFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/riwayatFragment"
         android:name="com.example.bloody_app.ui.history.HistoryFragment"
