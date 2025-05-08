@@ -1,81 +1,87 @@
 <resources>
+
+    <!-- App Info -->
     <string name="app_name">Bloody App</string>
     <string name="app_logo">App Logo</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!-- Auth -->
-    <string name="welcome_app">Welcome to Bloody App!</string>
-    <string name="login_description">Masukkan email dan kata sandi Anda.</string>
+    <!-- Authentication -->
     <string name="email">Email</string>
-    <string name="placeholder_email">user@gmail.com</string>
-    <string name="password">Password</string>
-    <string name="placeholder_password">password</string>
     <string name="forgot_password">Lupa Password?</string>
-    <string name="login">Login</string>
-    <string name="google_icon">Google Icon</string>
-    <string name="login_with_google">Login with Google</string>
-    <string name="dont_have_account">Belum punya akun?</string>
-    <string name="signup">Signup</string>
-    <string name="or">OR</string>
-    <string name="signup_description">Buat akun dan isi formulir dibawah.</string>
     <string name="full_name">Nama Lengkap</string>
-    <string name="placeholder_full_name">nama lengkap</string>
     <string name="have_account">Sudah punya akun?</string>
-
-    <!-- Icon -->
-    <string name="icon_time">Icon Time</string>
-    <string name="icon_calendar">Icon Calendar</string>
+    <string name="login">Login</string>
+    <string name="login_description">Masukkan email dan kata sandi Anda.</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="or">OR</string>
+    <string name="password">Password</string>
+    <string name="placeholder_email">user@gmail.com</string>
+    <string name="placeholder_full_name">nama lengkap</string>
+    <string name="placeholder_password">password</string>
+    <string name="signup">Signup</string>
+    <string name="signup_description">Buat akun dan isi formulir dibawah.</string>
+    <string name="welcome_app">Welcome to Bloody App!</string>
+    <string name="dont_have_account">Belum punya akun?</string>
+    <string name="google_icon">Google Icon</string>
 
     <!-- Onboarding -->
-    <string name="skip">Skip</string>
-    <string name="selanjutnya">Selanjutnya</string>
-    <string name="title_onboarding_1">Donor Darah</string>
     <string name="desc_onboarding_1">Bantu sesama dengan mendonorkan darah untuk kehidupan yang lebih baik.</string>
-    <string name="title_onboarding_2">Selamatkan Hidup</string>
     <string name="desc_onboarding_2">Setetes darah Anda sangat berarti untuk menyelamatkan banyak jiwa.</string>
-    <string name="image_onboarding">Image Onboarding</string>
-    <string name="title_onboarding_3">Komunitas Donor</string>
     <string name="desc_onboarding_3">Bergabunglah dengan komunitas peduli dan berbagi kebaikan melalui donor darah.</string>
+    <string name="image_onboarding">Image Onboarding</string>
+    <string name="selanjutnya">Selanjutnya</string>
+    <string name="skip">Skip</string>
+    <string name="title_onboarding_1">Donor Darah</string>
+    <string name="title_onboarding_2">Selamatkan Hidup</string>
+    <string name="title_onboarding_3">Komunitas Donor</string>
 
     <!-- Banner -->
     <string name="image_banner">Image Banner</string>
 
     <!-- Schedule -->
-    <string name="event_location">Nama Lokasi</string>
     <string name="event_date">7 Mei 2025</string>
+    <string name="event_location">Nama Lokasi</string>
     <string name="event_time">08.00 - 13.00</string>
 
     <!-- Article -->
-    <string name="image_article">Image Article</string>
-    <string name="article_title">Judul Artikel</string>
     <string name="article_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</string>
+    <string name="article_title">Judul Artikel</string>
+    <string name="image_article">Image Article</string>
 
-    <!-- Fragment -->
-    <string name="page_title">Page Title</string>
+    <!-- Icons -->
+    <string name="icon_calendar">Icon Calendar</string>
+    <string name="icon_time">Icon Time</string>
+
+    <!-- Home / Fragment -->
     <string name="hai_user">Hai, User</string>
-    <string name="next_donation">Anda bisa donor lagi dalam 12 hari</string>
-    <string name="nearest_schedule">Jadwal Donor Terdekat</string>
-    <string name="see_all">Lihat Semua</string>
     <string name="latest_article">Artikel Terbaru</string>
+    <string name="nearest_schedule">Jadwal Donor Terdekat</string>
+    <string name="next_donation">Anda bisa donor lagi dalam 12 hari</string>
+    <string name="page_title">Page Title</string>
     <string name="search">Cari</string>
+    <string name="see_all">Lihat Semua</string>
 
     <!-- Profile -->
-    <string name="user_image">User Photo</string>
-    <string name="role">Pendonor</string>
-    <string name="username">Username</string>
-    <string name="user_gmail">user@gmail.com</string>
-    <string name="phone_number">0891234567890</string>
+    <string name="address">Alamat</string>
     <string name="birthdate">15 Januari 1990</string>
-    <string name="gender">Laki-laki</string>
     <string name="blood_type">AB+</string>
-    <string name="weight">62 Kg</string>
     <string name="can_donor">Bisa Donor</string>
-    <string name="last_donor">Terakhir Donor</string>
+    <string name="edit_profile">Edit Profil</string>
+    <string name="gender">Laki-laki</string>
     <string name="last_date_donor">10 April 2025</string>
+    <string name="last_donor">Terakhir Donor</string>
+    <string name="logout">Logout</string>
+    <string name="phone_number">0891234567890</string>
+    <string name="role">Pendonor</string>
     <string name="total_donor">Jumlah Donor</string>
     <string name="total_number_donor">5</string>
+    <string name="user_gmail">user@gmail.com</string>
+    <string name="user_image">User Photo</string>
+    <string name="username">Username</string>
+    <string name="weight">62 Kg</string>
     <string name="history_donor">Riwayat Donor</string>
-    <string name="edit_profile">Edit Profil</string>
-    <string name="logout">Logout</string>
+
+    <!-- Faskes -->
+    <string name="image_faskes">Image Faskes</string>
+    <string name="name_faskes">PMI Kuningan</string>
+
 </resources>

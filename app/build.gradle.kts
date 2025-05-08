@@ -43,6 +43,9 @@ android {
 dependencies {
     implementation(libs.dotsindicator)
     implementation(libs.glide)
+    implementation(libs.androidx.annotation)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     kapt(libs.compiler)
 
     implementation(libs.androidx.core.ktx)
