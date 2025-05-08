@@ -59,4 +59,23 @@
     <string name="see_all">Lihat Semua</string>
     <string name="latest_article">Artikel Terbaru</string>
     <string name="search">Cari</string>
+
+    <!-- Profile -->
+    <string name="user_image">User Photo</string>
+    <string name="role">Pendonor</string>
+    <string name="username">Username</string>
+    <string name="user_gmail">user@gmail.com</string>
+    <string name="phone_number">0891234567890</string>
+    <string name="birthdate">15 Januari 1990</string>
+    <string name="gender">Laki-laki</string>
+    <string name="blood_type">AB+</string>
+    <string name="weight">62 Kg</string>
+    <string name="can_donor">Bisa Donor</string>
+    <string name="last_donor">Terakhir Donor</string>
+    <string name="last_date_donor">10 April 2025</string>
+    <string name="total_donor">Jumlah Donor</string>
+    <string name="total_number_donor">5</string>
+    <string name="history_donor">Riwayat Donor</string>
+    <string name="edit_profile">Edit Profil</string>
+    <string name="logout">Logout</string>
 </resources>
