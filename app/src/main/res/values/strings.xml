@@ -83,5 +83,7 @@
     <!-- Faskes -->
     <string name="image_faskes">Image Faskes</string>
     <string name="name_faskes">PMI Kuningan</string>
+    <string name="list_of_latest_articles">List of latest articles</string>
+    <string name="upcoming_donation_schedules">Upcoming donation schedules</string>
 
 </resources>

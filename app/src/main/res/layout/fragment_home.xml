@@ -37,7 +37,7 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -52,7 +52,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/headerLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -133,17 +139,20 @@
                 android:overScrollMode="never"
                 android:clipToPadding="false"
                 android:scrollbars="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_schedule_card"
+                android:contentDescription="@string/list_of_latest_articles"
                 android:orientation="horizontal"
                 android:layout_marginStart="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_schedule_card"
                 tools:layout_height="150dp"/>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/bannerViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="123dp"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"
+                tools:src="@drawable/image_banner1"
+                tools:layout_height="123dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -156,8 +165,8 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="12dp"/>
 
-            <LinearLayout
-                android:id="@+id/article_container"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_article_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -166,10 +175,12 @@
                 android:clipToPadding="false"
                 android:nestedScrollingEnabled="false"
                 android:orientation="vertical"
-                android:overScrollMode="never"
-                tools:layout_height="500dp"/>
+                android:overScrollMode="always"
+                android:contentDescription="@string/upcoming_donation_schedules"
+                tools:listitem="@layout/item_article"
+                tools:layout_height="200dp"/>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

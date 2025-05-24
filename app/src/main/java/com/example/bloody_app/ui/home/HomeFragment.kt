@@ -76,12 +76,10 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupArticle() {
-        for (article in listArticles) {
-            val itemBinding = ItemArticleBinding.inflate(layoutInflater, binding.articleContainer, false)
-            itemBinding.ivArticleImage.setImageResource(article.imageUrl)
-            itemBinding.tvArticleTitle.text = article.title
-            itemBinding.tvArticleDescription.text = article.description
-            binding.articleContainer.addView(itemBinding.root)
+        val articleAdapter = ArticleAdapter(listArticles)
+        binding.rvArticleList.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = articleAdapter
         }
     }
 
