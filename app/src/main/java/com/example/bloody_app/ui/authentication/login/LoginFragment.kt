@@ -6,50 +6,61 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.bloody_app.MainActivity
 import com.example.bloody_app.R
-import com.example.bloody_app.ui.authentication.signup.SignupFragment
+import com.example.bloody_app.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
-    private lateinit var emailInput: EditText
-    private lateinit var passwordInput: EditText
-    private lateinit var loginButton: Button
-    private lateinit var signupText: TextView
+
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var viewModel: LoginViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+    ): View {
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Init view
-        emailInput = view.findViewById(R.id.editTextEmail)
-        passwordInput = view.findViewById(R.id.editTextPassword)
-        loginButton = view.findViewById(R.id.buttonLogin)
-        signupText = view.findViewById(R.id.textSignupLink)
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
-        loginButton.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
+            val email = binding.etEmail.text.toString().trim()
+            val password = binding.etPassword.text.toString().trim()
+
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(requireContext(), "Email dan password wajib diisi", Toast.LENGTH_SHORT).show()
+            } else {
+                viewModel.login(email, password)
+            }
+        }
+
+        // Observasi LiveData loginResponse (pastikan LiveData ini ada di LoginViewModel)
+        viewModel.loginResponse.observe(viewLifecycleOwner) {
+            // Misal langsung navigasi jika login berhasil, kamu bisa tambahkan cek status result juga
+            binding.btnLogin.isEnabled = true
             val intent = Intent(requireContext(), MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 
-        // Arahkan ke SignupFragment saat teks diklik
-        signupText.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, SignupFragment())
-                .addToBackStack(null)
-                .commit()
+        binding.tvSignup.setOnClickListener {
+            // Navigasi ke SignupFragment (jika pakai Navigation Component)
+             findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
