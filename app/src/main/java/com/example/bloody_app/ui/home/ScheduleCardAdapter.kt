@@ -11,7 +11,8 @@ import com.example.bloody_app.model.Schedule
 class ScheduleCardAdapter(private val items: List<Schedule>) :
     RecyclerView.Adapter<ScheduleCardAdapter.ScheduleViewHolder>() {
 
-    inner class ScheduleViewHolder(binding: ItemScheduleCardBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ScheduleViewHolder(binding: ItemScheduleCardBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         val image: ImageView = binding.ivScheduleCardImage
         val location: TextView = binding.tvScheduleCardLocation
         val date: TextView = binding.tvScheduleCardDate
@@ -19,7 +20,8 @@ class ScheduleCardAdapter(private val items: List<Schedule>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewHolder {
-        val binding = ItemScheduleCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemScheduleCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ScheduleViewHolder(binding)
     }
 
